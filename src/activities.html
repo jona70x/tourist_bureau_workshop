@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activities</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-custom bg-gradient p-3"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Visit Vallejo 🌇</a>
+          <button
+            class="navbar-toggler hidden-lg-up"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            -
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" aria-current="page"
+                  >Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="activities.html">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hiking.html">Hiking</a>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid g">
+      <section class="row">
+        <div class="col position-relative" style="height: 20rem">
+          <!-- Video Box -->
+          <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+              <source src="assets/city-video.mp4" type="video/mp4" />
+              Your browser is not supported!
+            </video>
+          </div>
+          <!-- Text Box -->
+          <div class="position-absolute hero-text">
+            <h2 class="display-1 text-black">We've Got Spirit</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Activities section -->
+    <div class="container">
+      <section class="row p-2 mt-5 g-4">
+        <div class="col-12 text-center">
+          <h1>Take your time, fun is here to stay</h1>
+        </div>
+        <!-- Dropdown -->
+        <div class="col-6">
+          <h4 class="text-center mb-2">Activity categories</h4>
+          <select
+            name="activity-categories"
+            id="activity-categories"
+            class="form-select"
+          >
+            <!-- "Adventures", "Arts & Crafts", "Museums", "Wine Tastings", "Other" -->
+            <option value="null">Select one</option>
+            <option value="adventures">Adventures</option>
+            <option value="museums">Museums</option>
+            <option value="arts & crafts">Arts & Crafts</option>
+            <option value="wine tastings">Wine Tasting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="col activity-selection__container d-none">
+          <!-- Conditionally rendered dropdown -->
+          <h4 class="text-center">Select an activity</h4>
+          <select
+            name="activity-selection"
+            id="activity-selection"
+            class="form-select"
+          >
+            <option value="null">Select one</option>
+          </select>
+        </div>
+        <!-- Conditionally rendered activities description -->
+        <div
+          class="col-12 d-flex flex-column align-items-center activity-description__container d-none"
+        >
+          <h3 class="text-center">Activity details</h3>
+          <div class="card" style="max-width: 50rem">
+            <div class="card-body">
+              <!-- <h5 class="card-title activity-name mb-4">
+                Valley Hot Air Balloons
+              </h5>
+              <div class="card-text">
+                <p>ID: A101</p>
+                <p>Category: Adventures</p>
+                <p>
+                  Description: Enjoy a lovely hot air balloon ride over the
+                  valley at sunrise. Call 800-555-1212 to reserve a date/time
+                  after you complete your e-ticket purchase.
+                </p>
+                <p>Location: 121 S. Main Street</p>
+                <p>Price: $265.0</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Conditionally rendered form -->
+        <div
+          class="col-12 payment-activity__form d-none d-flex flex-column justify-content-center align-items-center mb-5 p-2"
+        >
+          <h3>Confirm payment</h3>
+          <form class="row g-3 needs-validation w-75" novalidate>
+            <div class="col-md-12">
+              <label for="tickets-input" class="form-label"
+                >Number of tickets</label
+              >
+              <input
+                type="number"
+                min="1"
+                max="10"
+                class="form-control"
+                id="tickets-input"
+                value="1"
+                required
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-12">
+              <label for="credit-card-input" class="form-label"
+                >Credit Card number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="credit-card-input"
+                placeholder="XXXX-XXXX-XXXX-XXXX"
+                required
+              />
+              <div class="invalid-feedback">
+                Please provide a valid credit card number
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="email-input" class="form-label">Email</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input
+                  type="email"
+                  placeholder="example@example.com"
+                  class="form-control"
+                  id="email-input"
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 justify-content-center gap-4 d-flex">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+              <button class="btn btn-primary reset-button" type="reset">
+                Reset form
+              </button>
+            </div>
+          </form>
+
+          <div
+            class="col-12 confirmation-message text-center mt-5 mb-5 fw-bold d-none"
+          ></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

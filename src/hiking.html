@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hikings 🏔️</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-custom bg-gradient p-3"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Visit Vallejo 🌇</a>
+          <button
+            class="navbar-toggler hidden-lg-up"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            -
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" aria-current="page"
+                  >Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activities.html">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="hiking.html">Hiking</a>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid g">
+      <section class="row">
+        <div class="col position-relative" style="height: 20rem">
+          <!-- Video Box -->
+          <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+              <source src="assets/city-video.mp4" type="video/mp4" />
+              Your browser is not supported!
+            </video>
+          </div>
+          <!-- Text Box -->
+          <div class="position-absolute hero-text">
+            <h2 class="display-1 text-black">We've Got Spirit</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Activities section -->
+    <div class="container">
+      <section class="row p-2 mt-5 g-4 mx-auto justify-content-center">
+        <div class="col-12 text-center">
+          <h1>Reach the skies with our hikes ⛰️</h1>
+        </div>
+        <!-- Dropdown -->
+        <div class="col-6">
+          <h4 class="text-center mb-2 text-primary">Hiking options</h4>
+          <select
+            name="hiking-categories"
+            id="hiking-categories"
+            class="form-select"
+          >
+            <option value="null">Select one</option>
+          </select>
+        </div>
+        <!-- Conditionally rendered activities description -->
+        <div
+          class="col-12 d-flex flex-column align-items-center activity-description__container"
+        >
+          <h3 class="text-center text-primary">Hiking details</h3>
+        </div>
+
+        <div class="row mt-4 hiking-details__box d-none p-2">
+          <!--  -->
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
